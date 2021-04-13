@@ -139,13 +139,10 @@ public class LinkStackApp
 
          }
 
-         if(check== false && !stack.isEmpty())                    //first character might be closed bracket and upcoming brackets might be opening )(())
+         if((check== false && !stack.isEmpty()) || check==false)                    //first character might be closed bracket and upcoming brackets might be opening )(())
             System.out.println("Opening bracket is missing");
          else if(!stack.isEmpty())                                //if stack is not empty at the end of all pop operations, we need closing brackets (()
             System.out.println("Closing bracket is missing");
-
-         else if(check == false)                                  // if stack is empty and check is false we got only closing bracket )(
-            System.out.println("Openning brackes is missing");
 
          else
             System.out.println("Accepted");                       // stack is empty and check is true (), (())()
